@@ -32,13 +32,13 @@ class RNN(nn.Module):
         # hidden = self.dropout(torch.cat((hidden[-2,:,:], hidden[-1,:,:]), dim=1))
         hidden = self.dropout(output[-1,:,:])
         # hidden = [batch size, hid dim * num directions]
-        return self.fc(hidden.squeeze(0))
+        return self.fc(hidden)
     
 def main():
     # hyperparameters
     learning_rate = 0.0001
     num_epochs = 50
-    batch_size = 128
+    batch_size = 512
     lbd = 0.0001
     dropout = 0.1
     n_layers = 2
