@@ -37,14 +37,14 @@ class RNN(nn.Module):
 def main():
     # hyperparameters
     learning_rate = 0.0001
-    num_epochs = 50
+    num_epochs = 200
     batch_size = 512
     lbd = 0.0001
-    dropout = 0.1
+    dropout = 0.5
     n_layers = 2
 
     EMBEDDING_DIM = 300
-    HIDDEN_DIM = 256
+    HIDDEN_DIM = 128
     OUTPUT_DIM = 5
     BIDIRECTIONAL = True
     
